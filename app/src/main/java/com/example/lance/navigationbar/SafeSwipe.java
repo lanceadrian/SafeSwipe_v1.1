@@ -45,4 +45,10 @@ public class SafeSwipe extends Activity {
         //Instead of using finish(), this totally destroys the process
         android.os.Process.killProcess(android.os.Process.myPid());
     }
+
+    public void goHome(View view)
+    {
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, new HomeScreen()).commit();
+    }
 }

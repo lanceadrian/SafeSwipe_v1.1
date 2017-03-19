@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaBtn"
+        android:layout_marginBottom="63dp"
+        android:onClick="sendToNextPage4"
+        android:layout_marginRight="67dp"
+        android:layout_marginEnd="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button8"
+        android:onClick="backToSetup3"
+        android:layout_alignBaseline="@+id/mediaBtn"
+        android:layout_alignBottom="@+id/mediaBtn"
+        android:layout_toLeftOf="@+id/radioGroup1"
+        android:layout_toStartOf="@+id/radioGroup1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView3"
+        android:layout_marginBottom="202dp"
+        android:layout_above="@+id/mediaBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:id="@+id/textView7"
+        android:text="The kind of media that will be recorded once that app is activated"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_height="75dp"
+        android:textAlignment="gravity"
+        android:layout_above="@+id/mediaBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mediaBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp">
+        <RadioButton
+            android:text="Photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/photo" />
+
+        <RadioButton
+            android:text="Video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton7"
+            android:layout_alignLeft="@+id/radioButton7"
+            android:layout_alignStart="@+id/radioButton7"
+            android:id="@+id/video" />
+    </RadioGroup>
+</RelativeLayout>

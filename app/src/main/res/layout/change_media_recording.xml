@@ -6,36 +6,56 @@
         android:text="Change media recording"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="194dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <RadioButton
-        android:text="Video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:id="@+id/radioButton5" />
-
-    <RadioButton
-        android:text="Photo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton5"
-        android:layout_alignRight="@+id/radioButton5"
-        android:layout_alignEnd="@+id/radioButton5"
-        android:id="@+id/radioButton6" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <Button
         android:text="Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:id="@+id/button2"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true">
+
+    <RadioButton
+        android:text="Video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton5"
         android:layout_below="@+id/radioButton6"
+        android:layout_alignLeft="@+id/radioButton6"
+        android:layout_alignStart="@+id/radioButton6" />
+
+    <RadioButton
+        android:text="Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton6"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
+    </RadioGroup>
+
+    <TextView
+        android:text="In here, you can change the kind of media the application will capture once the application is activated."
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:id="@+id/textViewmediarecording"
+        android:textAlignment="center"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp" />
 
 </RelativeLayout>
