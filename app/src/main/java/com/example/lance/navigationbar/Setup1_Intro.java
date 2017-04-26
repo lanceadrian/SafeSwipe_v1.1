@@ -9,27 +9,22 @@ import android.view.View;
  * Created by Lance on 3/12/2017.
  */
 
-public class Setup6 extends AppCompatActivity {
+public class Setup1_Intro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.setup_pg6);
+        setContentView(R.layout.setup_pg1);
     }
 
-    public void sendToNextPage6 (View buttonControl)
+    public void sendToNextPage (View buttonControl)
     {
 
         //dito lalagay values para ipasa
-        Intent nextSetup = new Intent (this, Setup7.class);
+        Intent nextSetup = new Intent (this, Setup2_Number.class);
         startActivity(nextSetup);
     }
 
-    public void backToSetup5 (View buttonControl)
-    {
-        Intent backSetup = new Intent (this, Setup5.class);
-        startActivity(backSetup);
-    }
 
 }

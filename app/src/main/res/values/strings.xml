@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">SafeSwipe</string>
 
+    <string name="one"><font size="500">1</font>\n<font size="10"></font></string>
+    <string name="two"><font size="500">2</font>\n<font size="10">ABC</font></string>
+    <string name="three"><font size="500">3</font>\n<font size="10">DEF</font></string>
+    <string name="four"><font size="500">4</font>\n<font size="10">GHI</font></string>
+    <string name="five"><font size="500">5</font>\n<font size="10">JKL</font></string>
+    <string name="six"><font size="500">6</font>\n<font size="10">MNO</font></string>
+    <string name="seven"><font size="500">7</font>\n<font size="10">PQRS</font></string>
+    <string name="eight"><font size="500">8</font>\n<font size="10">TUV</font></string>
+    <string name="nine"><font size="500">9</font>\n<font size="10">WXYZ</font></string>
+    <string name="zero"><font size="500">0</font>\n<font size="10">+</font></string>
+
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -60,8 +73,10 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="instructions">Pindot bukas</string>
-    <string name="unlock">Bukas</string>
+    <string name="instructions">Enter PIN to unlock</string>
+    <string name="unlock">Unlock</string>
+    <string name="no_location_detected">No location detected. Make sure location is enabled on the device.</string>
+    <string name="hint_main">Password</string>
 </resources>
 
 

@@ -2,65 +2,113 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lance.navigationbar">
 
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!-- Camera Permissions -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- For Storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Location Permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Lock Screen Permission -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:label="SafeSwipe"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true">
 
+        <!-- Services -->
+        <service android:name=".LockScreenService"/>
+        <service android:name=".YourService"/>
+        <service
+            android:name="com.example.lance.navigationbar.CameraService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+
+        <!-- Functional Activities -->
+
+        <activity
+            android:name="com.example.lance.navigationbar.MainActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.lance.navigationbar.LockScreenActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 
         <activity
             android:name=".SafeSwipe"
-            android:label="SafeSwipe-UI v.2"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <activity android:name="com.example.lance.navigationbar.SafeSwipeVid"></activity>
+
+        <!-- Setup1_Intro Activities -->
+
+        <activity
+            android:name=".Setup1_Intro"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Setup2_Number"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Setup3_CustomMessage"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Setup4_MediaType"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Setup5_CameraType"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Setup6_Passcode"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Setup7_Recap"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <activity
-            android:name=".MainActivity"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Setup"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Setup2"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Setup3"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Setup4"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Setup5"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Setup6"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Setup7"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
 
     </application>
 

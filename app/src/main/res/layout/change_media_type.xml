@@ -16,13 +16,13 @@
         android:text="Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_below="@+id/radioGroup"
+        android:id="@+id/MediaSettingsButton"
+        android:layout_below="@+id/radioGroupForMediaSettings"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupForMediaSettings"
         android:layout_width="wrap_content"
         android:layout_marginTop="22dp"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_height="100dp"
         android:id="@+id/textViewmediarecording"
         android:textAlignment="center"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/MediaSettingsButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp" />
 

@@ -17,16 +17,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
-        android:id="@+id/imageView3"
-        android:layout_marginBottom="62dp"
-        android:layout_alignBottom="@+id/textView7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
@@ -40,17 +30,99 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="200dp"
-        android:id="@+id/textView7"
-        android:text="Are these settings correct?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:layout_height="75dp"
-        android:textAlignment="gravity"
-        android:layout_marginTop="137dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button7"
-        android:layout_alignEnd="@+id/button7"
-        android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:paddingTop="1dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/button7"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/button7"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="137dp"
+            android:gravity="center"
+            android:text="Are these settings correct?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/RecapNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_toEndOf="@+id/button8"
+            android:layout_toRightOf="@+id/button8"
+            android:gravity="center"
+            android:text="Number" />
+
+        <TextView
+            android:id="@+id/RecapPasscode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/RecapMedia"
+            android:layout_alignStart="@+id/RecapMedia"
+            android:layout_below="@+id/RecapMedia"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="Passcode" />
+
+        <TextView
+            android:id="@+id/RecapMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/RecapMessage"
+            android:layout_alignLeft="@+id/RecapMessage"
+            android:layout_alignRight="@+id/RecapMessage"
+            android:layout_alignStart="@+id/RecapMessage"
+            android:layout_below="@+id/RecapMessage"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="Media Type" />
+
+        <TextView
+            android:id="@+id/RecapCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/RecapPasscode"
+            android:layout_alignRight="@+id/RecapPasscode"
+            android:layout_below="@+id/RecapPasscode"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Camera Type" />
+
+        <TextView
+            android:id="@+id/RecapMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginTop="18dp"
+            android:layout_toLeftOf="@+id/button7"
+            android:layout_toStartOf="@+id/button7"
+            android:gravity="center"
+            android:text="Custom Message" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="221dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_above="@+id/button7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

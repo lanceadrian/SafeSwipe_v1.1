@@ -4,29 +4,239 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#FFFFFF"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.lance.navigationbar.MainActivity" >
+    tools:context="com.example.lance.navigationbar.LockScreenActivity"
+    android:gravity="center"
+    android:id="@+id/myRelativeLayout">
 
-    <TextView
-        android:id="@+id/tvInstructions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/instructions"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:textColor="#000000" />
+    <SurfaceView
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:id="@+id/surfaceView" />
 
-    <Button
-        android:id="@+id/btnUnlock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:layout_below="@id/tvInstructions"
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/unlock"
-        android:textAppearance="@android:style/TextAppearance.Large"
-        android:onClick="unlockScreen"/>
+        android:background="#90000000" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@+id/surfaceView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:onClick="onStartSafeSwipe"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberPassword"
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/pin_delete"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="onClickPins"
+                android:background="@android:color/transparent"
+                android:textColor="@color/white"
+                android:text="X" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/instructions"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#ffffff"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/pin_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/pin_btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/pin_btn7"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:text="Button"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/pin_btn0"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
+
+            <Button
+                android:id="@+id/pin_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="onClickPins"
+                android:text="ok"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </RelativeLayout>

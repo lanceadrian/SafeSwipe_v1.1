@@ -17,19 +17,20 @@
         <item
             android:id="@+id/nav_change_swipe"
             android:icon="@drawable/ic_settings"
-            android:title="Change Swipe" />
+            android:title="Change Camera" />
         <item
-            android:id="@+id/nav_change_notification"
+            android:id="@+id/nav_change_passcode"
             android:icon="@drawable/ic_settings"
-            android:title="Change notification" />
+            android:title="Change passcode" />
+        <item
+            android:id="@+id/nav_change_tries"
+            android:icon="@drawable/ic_settings"
+            android:title="Change incorrect tries" />
     </group>
 
     <item android:title="">
         <menu>
-            <item
-                android:id="@+id/nav_facebook_connect"
-                android:icon="@drawable/ic_facebook"
-                android:title="Facebook Connect" />
+
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_about"

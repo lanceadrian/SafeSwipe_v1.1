@@ -9,7 +9,7 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
-        android:id="@+id/editText3"
+        android:id="@+id/changeCustomMessage"
         android:hint="Enter custom message here"
         android:layout_height="100dp" />
 
@@ -17,29 +17,29 @@
         android:text="Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/changeCustomMessage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:id="@+id/button3" />
-
-    <TextView
-        android:text="Change custom message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:id="@+id/textView2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/changeCustomMessageButton" />
 
     <TextView
         android:text="In here, you can change the custom message that will be sent to your set contact once the application is activated."
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/button3"
+        android:layout_below="@+id/changeCustomMessageButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:id="@+id/textViewcustommesage"
         android:textAlignment="center"/>
+
+    <TextView
+        android:text="Change custom message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="98dp"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
