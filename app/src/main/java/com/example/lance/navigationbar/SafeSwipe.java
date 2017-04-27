@@ -152,19 +152,10 @@ public class SafeSwipe extends AppCompatActivity implements SurfaceHolder.Callba
                 getSupportFragmentManager().beginTransaction().add(
                         R.id.fragment_safeSwipe, mLocationFragment).commit();
                 uploadFile();
-
-//                if(camera!=null){
-//                    camera.stopPreview();
-//                    camera.setPreviewCallback(null);
-//
-//                    camera.release();
-//                    camera = null;
-//                }
-            }
-
+                }
         };
-
         mCamera.takePicture(null, null, mCall);
+
 
 //        Intent intent = new Intent(this, MainActivity.class);
 //        startActivity(intent);

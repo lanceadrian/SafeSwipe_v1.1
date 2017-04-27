@@ -238,5 +238,10 @@
 
 
     </LinearLayout>
+    <fragment
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:name="com.example.lance.navigationbar.LocationFragment"
+        android:id="@+id/fragment_lockscreen" />
 
 </RelativeLayout>

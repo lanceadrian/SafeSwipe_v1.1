@@ -30,6 +30,7 @@ public class LockScreenActivity extends AppCompatActivity {
     private String savedIncorrectTries = "";
     private String savedMediaType = "";
     private Handler handler = new Handler();
+    private LocationFragment mLocationFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,6 +139,19 @@ public class LockScreenActivity extends AppCompatActivity {
     public void startSafeSwipeVideo()
     {
         startActivityForResult(new Intent(this, SafeSwipeVid.class),1);
+
+        new CountDownTimer(601000, 300000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                startActivity(new Intent(LockScreenActivity.this, SafeSwipeVid.class));
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
     }
 
     private Runnable runnable = new Runnable() {
@@ -152,10 +166,8 @@ public class LockScreenActivity extends AppCompatActivity {
 
     public void startSafeswipe(){
         startActivityForResult(new Intent(this, SafeSwipe.class),1);
-
-//        handler.postDelayed(runnable, 30000);
-
-//        new CountDownTimer(601000, 300000) {
+        timer();
+//        new CountDownTimer(900000, 60000) {
 //
 //            @Override
 //            public void onTick(long millisUntilFinished) {
@@ -169,8 +181,29 @@ public class LockScreenActivity extends AppCompatActivity {
 //        }.start();
     }
 
+    public void timer()
+    {
+        mLocationFragment = new LocationFragment();
+        getSupportFragmentManager().beginTransaction().add(
+                R.id.fragment_lockscreen, mLocationFragment).commit();
+        handler.postDelayed(runnable, 30000);
+
+    }
+
     public void onStartSafeSwipe(View view){
-        startActivity(new Intent(this, SafeSwipe.class));
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        if (preferences != null) {
+            savedMediaType = preferences.getString("mediaType", "");
+        }
+
+        if(savedMediaType.toString().equals("Photo")) {
+            startSafeswipe();
+        }
+        else if (savedMediaType.toString().equals("Video"))
+        {
+            startSafeSwipeVideo();
+        }
     }
 
     /**
